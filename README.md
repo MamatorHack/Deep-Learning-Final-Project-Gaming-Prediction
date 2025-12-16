@@ -1,55 +1,59 @@
 # 🎮 DeepLearning Playtime Prediction
 
-Ce dépôt contient le projet final de Deep Learning visant à prédire le temps de jeu des utilisateurs en fonction de leur profil démographique, en utilisant un réseau de neurones artificiels (MLP).
+Ce dépôt documente un projet de Deep Learning visant à analyser et prédire le temps de jeu des utilisateurs. Il retrace une démarche complète de Data Science, incluant la critique des données, la détection de biais, et la réorientation stratégique vers des sources fiables.
 
-## 📝 Description du Projet
+## 📝 Contexte et Objectifs
 
-L'objectif de ce projet est d'analyser les comportements des joueurs et de tenter de prédire leur engagement (temps de jeu hebdomadaire) à partir de données statiques (âge, localisation, type de jeu favori, etc.).
+L'objectif initial était de construire un modèle prédictif capable d'estimer l'engagement d'un joueur (temps de jeu hebdomadaire) en fonction de son profil démographique (âge, localisation, type de jeu favori), en utilisant un réseau de neurones artificiels (MLP).
 
-Nous avons suivi une approche complète de Data Science :
-1.  **Exploratory Data Analysis (EDA) :** Visualisation de la répartition des données.
-2.  **Prétraitement :** Nettoyage et normalisation des données pour le réseau de neurones.
-3.  **Modélisation Deep Learning :** Implémentation d'un Perceptron Multicouche (MLP).
-4.  **Interprétation :** Analyse des résultats et recommandations stratégiques.
+## 🔄 Pivot Stratégique et Historique
+
+### 1. Première Analyse (Branche `old`)
+Lors de la première phase du projet, nous avons entraîné un Perceptron Multicouche sur un premier jeu de données.
+* **Constat :** L'Analyse Exploratoire des Données (EDA) et les résultats du modèle n'ont montré **aucune corrélation** significative. La distribution des données semblait aléatoire et incohérente.
+* **Conclusion :** Nous avons déduit que ce premier dataset était constitué de **données artificielles (synthétiques)** mal générées, rendant toute prédiction impossible.
+
+> 📂 **Accès à l'archive :**
+> Par souci de transparence scientifique, cette première analyse a été conservée.
+> Vous pouvez retrouver le code et les conclusions de cette étape dans la branche **`old`**.
+>
+> ```bash
+> git checkout old
+> ```
+
+### 2. Nouvelle Orientation (Branche `main`)
+Face à ce constat, nous avons décidé de basculer sur des **données réelles** pour garantir la pertinence de nos modèles de Deep Learning.
+
+Nous utilisons désormais le dataset **"Gaming Profiles 2025"**, regroupant des données authentiques de plateformes majeures.
+
+* **Source :** [Kaggle - Gaming Profiles 2025 (Steam, PlayStation, Xbox)](https://www.kaggle.com/datasets/artyomkruglov/gaming-profiles-2025-steam-playstation-xbox?resource=download&select=steam)
+* **Objectif actuel :** Appliquer notre architecture MLP sur ces comportements réels pour extraire de vrais patterns d'engagement.
 
 ## 🧠 Architecture Technique
 
-Le cœur du projet repose sur un algorithme de Deep Learning :
+Le cœur du projet repose sur l'utilisation de réseaux de neurones profonds :
 * **Modèle :** Perceptron Multicouche (MLP - Multi-Layer Perceptron).
-* **Architecture :** Couches cachées avec fonctions d'activation **ReLU** pour capturer la non-linéarité.
-* **Méthode :** Apprentissage par rétropropagation du gradient.
+* **Technique :** Couches denses (Dense Layers), fonction d'activation **ReLU** et rétropropagation du gradient.
+* **Stack :** Python 🐍, Pandas, NumPy, Matplotlib, Seaborn, Jupyter Notebook.
 
-### Technologies utilisées
-* **Langage :** Python 🐍
-* **Analyse de données :** Pandas, NumPy
-* **Visualisation :** Seaborn, Matplotlib
-* **Environnement :** Jupyter Notebook
-
-## 📊 Résultats Clés & Conclusion
-
-L'analyse menée dans ce notebook a permis de mettre en évidence un point crucial concernant le comportement des joueurs :
-
-> 🚫 **Constat :** Il n'existe pas de corrélation prédictive forte entre le profil démographique simple (âge, pays) et le temps de jeu. Un joueur de 25 ans peut jouer 1h comme 50h par semaine, quel que soit son pays.
-
-**Recommandation Stratégique (Cas LethalCompany) :**
-Comme démontré dans la conclusion du projet, pour améliorer la prédiction, il est nécessaire de collecter des **données comportementales historiques** (ex: temps de jeu de la semaine précédente) plutôt que de se baser uniquement sur des données statiques.
-
-## 🚀 Comment utiliser ce projet
+## 🚀 Installation et Utilisation
 
 1.  **Cloner le dépôt :**
     ```bash
     git clone [https://github.com/VOTRE-NOM-UTILISATEUR/DeepLearning-Playtime-Prediction.git](https://github.com/VOTRE-NOM-UTILISATEUR/DeepLearning-Playtime-Prediction.git)
     ```
+
 2.  **Installer les dépendances :**
-    Assurez-vous d'avoir Python installé, puis installez les librairies nécessaires :
+    Assurez-vous d'avoir Python installé, puis lancez :
     ```bash
     pip install pandas numpy matplotlib seaborn jupyter
     ```
-3.  **Lancer le notebook :**
+
+3.  **Lancer l'analyse :**
     ```bash
     jupyter notebook Final.ipynb
     ```
 
 ## 👤 Auteur
 
-Projet réalisé par **[VOTRE NOM]** dans le cadre du cours de Deep Learning.
+Projet réalisé dans le cadre du cours de Deep Learning en spécialité IA.
