@@ -1,0 +1,12 @@
+# Python
+__pycache__/
+*.py[cod]
+
+# Data & Models (Optionnel : si tes modèles sont trop gros > 100Mo)
+# data/
+# models_saved/*.keras
+# models_saved/*.pkl
+
+# Environments
+.venv/
+env/
