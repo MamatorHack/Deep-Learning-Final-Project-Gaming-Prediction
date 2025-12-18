@@ -33,6 +33,23 @@ D'après nos derniers tests (Dataset : 450k lignes), voici les modèles sélecti
     ```bash
     python oracle.py
 
+## 📁 Données (Dataset)
+
+Le dossier `data/` n'est pas inclus dans ce dépôt car les fichiers sont trop volumineux. Pour faire fonctionner le projet, vous devez télécharger les données sources manuellement.
+
+**Procédure :**
+1. Téléchargez le dataset depuis Kaggle : **[(https://www.kaggle.com/datasets/artyomkruglov/gaming-profiles-2025-steam-playstation-xbox/data)]**
+2. Créez un dossier nommé `data` à la racine du projet.
+3. Extrayez le contenu téléchargé (seulement les fichiers du dossier `steam` si présent) et placez-les dans `data/`.
+
+**Fichiers requis dans `data/` :**
+- `games.csv`
+- `prices.csv`
+- `players.csv`
+- `reviews.csv`
+
+> **Note :** Assurez-vous que les noms des fichiers correspondent exactement à la liste ci-dessus pour que le script `data_manager.py` les trouve.
+
 ## 🧠 L'Équipe de Développement
 
 - Mathis Marsault
